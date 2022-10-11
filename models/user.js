@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const  sequelize  = require("../util/database");
 
-const Chats = sequelize.define('user',{
+const User = sequelize.define('user',{
     id:{
         type:Sequelize.INTEGER,
         autoIncrement:true,
@@ -24,4 +24,4 @@ const Chats = sequelize.define('user',{
    
 })
 
-module.exports = Chats
+module.exports = User

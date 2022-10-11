@@ -7,13 +7,18 @@ const sequelize = require('./util/database')
 
 const userRoutes = require('./routes/chats')
 
-const user = require('./controllers/user')
+const UserModel = require('./models/user')
+const ChatModel = require('./models/chats')
 
 chats.use(cors())
 
 chats.use(bodyparser.json())
 
 chats.use(userRoutes)
+
+
+UserModel.hasMany(ChatModel)
+ChatModel.belongsTo(UserModel)
 
 sequelize
 //.sync({force:true})
