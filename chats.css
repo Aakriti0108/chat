@@ -1,0 +1,74 @@
+body
+{
+    background-color: #E3FDFD;
+}
+
+.signup-img-heading
+{
+    display: flex;
+    margin: 10px 250px;
+    background-color: #A6E3E9;
+}
+
+.signup-image
+{
+    margin: 5px 155px ;
+}
+
+
+.heading-group-chat
+{
+    color: #00ADB5;
+    margin: 35px 25px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.signup-display
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.signup-details
+{
+    margin:50px 550px;
+    background-color: #A6E3E9;
+    border : 5px solid #CBF1F5;
+    border-radius: 15px;
+    width: 900px;
+    height: 500px;
+}
+
+h1{
+    color:#00ADB5;
+     font-size: 30px;
+     text-align: center;
+     font-weight: bolder;
+}
+
+label
+{
+    color:#00ADB5;
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 60px;
+}
+
+input{
+    width: 220px;
+    height: 20px;
+    background: none;
+    border-radius: 5px;
+    border:2px solid #00ADB5;
+    margin-left: 60px;
+}
+
+#signup-btn
+{
+    margin:50px 125px;
+    font-size: 25px;
+    background: none;
+    color:#00ADB5;
+    border: 3px solid #00ADB5;
+}
