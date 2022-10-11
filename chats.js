@@ -1,27 +1,25 @@
-function signup(e)
-{
-    e.preventDefault();
+const express = require('express')
+const chats = express();
 
-    const signupDetails = {
-        name: e.target.name.value, 
-        phoneNumber:e.target.phoneNumber.value,
-        email: e.target.email.value,
-        password: e.target.password.value,
-       
-    }
-    
-    console.log(signupDetails)
-    // axios.post("http://localhost:3000/signup",signupDetails)
-    // .then(result=>{
-    //     alert("signup successfully")
-    //     window.location = "login.html"
-    //     console.log(result)
-    }
-    
-//     .catch(err =>{
-//         alert(err) 
-//     })
-    
-//     e.target.email.value="";
-//     e.target.password.value="";
-// }
+const cors = require('cors')
+const bodyparser = require('body-parser')
+const sequelize = require('./util/database')
+
+const userRoutes = require('./routes/chats')
+
+const user = require('./controllers/user')
+
+chats.use(cors())
+
+chats.use(bodyparser.json())
+
+chats.use(userRoutes)
+
+sequelize
+//.sync({force:true})
+.sync()
+.then(result=>{
+    chats.listen(3000)
+})
+.catch(err=>
+    console.log(err))
