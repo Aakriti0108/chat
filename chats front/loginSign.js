@@ -39,7 +39,7 @@ function login(e)
     axios.post("http://localhost:3000/login",loginDetails)
     .then(result=>{
         alert("login successfully")
-         window.location = "chat.html"
+         window.location = "groupchat.html"
         localStorage.setItem('token', result.data.token)
         console.log(result)
     })

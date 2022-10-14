@@ -1,23 +1,3 @@
-// const button = document.getElementById('text');
-//  button.addEventListener('click', () =>{
-//     const Message = document.getElementById('message').value;
-//     const token = localStorage.getItem('token')
-//     const message =
-//     {
-//         Message:Message
-//     }
-//     console.log(message)
-//     axios.post("http://localhost:3000/chatsstart", message,{headers:{"Authorization":token}})
-//     .then(result=>{
-//         console.log(result)
-//         showList(message)
-//     })
-//     .err(err=>
-//         console.log(err))
-
-   
-//         document.getElementById('message').value ="";
-//  })
 
  function chatStarted(e)
  {
@@ -34,7 +14,7 @@
     })
     .catch(err=>console.log(err))
 
-   e.target.chats.value=""
+   e.target.chats.value="";
  }
 function showList(user)
 {
